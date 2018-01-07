@@ -265,7 +265,9 @@ static void ZB_copyFrameBufferRGB24(ZBuffer * zb,
 	    p += 3;
 	} while (--n > 0);
 
-	(char *) p1 += linesize;
+	//orig (char *) p1 += linesize;
+	// http://c-faq.com/ptrs/castincr.html
+	p1 += linesize;
     }
 }
 
