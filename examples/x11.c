@@ -92,6 +92,8 @@ int ui_loop(int argc, char **argv, const char *name)
   init();
   reshape(width, height);
 
+  //glDebug(1); //mgarcia debugging ON
+
   while (1) {
     if (XPending(dpy) > 0) {
       XNextEvent(dpy,&xev);
